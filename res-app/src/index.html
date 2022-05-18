@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Real Estate Token (RES) Project</title>
+    <link rel="shortcut icon" type="image/x-icon" href="main-asset/images/illustrations/star_icon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap" media="print" onload="this.media='all'"/>
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap"/>
+    </noscript>
+    <link href="main-asset/css/font-awesome/css/all.min.css?ver=1.2.0" rel="stylesheet">
+    <link href="main-asset/css/bootstrap-icons/bootstrap-icons.css?ver=1.2.0" rel="stylesheet">
+    <link href="main-asset/css/bootstrap.min.css?ver=1.2.0" rel="stylesheet">
+    <link href="main-asset/css/aos.css?ver=1.2.0" rel="stylesheet">
+    <link href="main-asset/css/main.css?ver=1.3.1" rel="stylesheet">
+    <noscript>
+      <style type="text/css">
+        [data-aos] {
+            opacity: 1 !important;
+            transform: translate(0) scale(1) !important;
+        }
+      </style>
+    </noscript>
+  </head>
+  <body id="top">
+    <header class="bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" id="header-nav" role="navigation">
+        <div class="container"><a class="link-dark navbar-brand site-title mb-0" href="#">RES App</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto me-2">
+              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#dex">RES</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+<div class="page-content">
+<div id="content">
+ <div class="section px-3 px-lg-4 pt-5" id="about">
+  <div class="container-narrow">
+    <div class="text-center mb-5">
+      <h2 class="marker marker-center">About</h2>
+    </div>
+    <div class="text-center">
+      <p class="mx-auto mb-3" style="max-width:600px"> These services are provided for Real Estate Token (RES). The simple real state token by solidity and web3.js deployed on ETH network.</p>
+    </div>
+    <div class="row py-3">
+      <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="100"><img class="mb-2" src="main-asset/images/services/web-design.svg" width="96" height="96" alt="web design"/>
+        <div class="h5">Add</div>
+      </div>
+      <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="200"><img class="mb-2" src="main-asset/images/services/graphic-design.svg" width="96" height="96" alt="graphic design"/>
+        <div class="h5">Assess</div>
+      </div>
+      <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="300"><img class="mb-2" src="main-asset/images/services/ui-ux.svg" width="96" height="96" alt="ui-ux"/>
+        <div class="h5">Approve</div>
+      </div>
+      <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="400"><img class="mb-2" src="main-asset/images/services/app-development.svg" width="96" height="96" alt="app development"/>
+        <div class="h5">Buy</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section px-3 px-lg-4 pt-5" id="dex">
+  <div class="container-narrow">
+    <div class="text-center mb-5">
+      <h2 class="marker marker-center">Real Estate Token (RES)</h2>
+    </div>
+    <div class="row"> 
+    
+
+
+        <div class="col-md-12 mb-5" data-aos="fade-right" data-aos-delay="100">
+            <div class="info">
+                <h5 class="text-center0"><b>Town Supervisor: </b><span id="supervisor"></span></h5>
+                <h5 class="text-center0"><b>Current Account: </b><span id="current_account"></span></h5>
+                <h3 class="text-center0" id="account_type"></h3>
+            </div>
+          </div>
+   
+      <div class="col-md-6 mb-5" data-aos="fade-right" data-aos-delay="200">
+        <form>
+            <h3>Add an asset</h3>   
+            <div class="form-group">
+                <label for="asset_price">Price</label>
+                <input id="asset_price" type="number" class="form-control" placeholder="Enter asset price">
+            </div>
+            <div class="form-group">
+                <label for="asset_owner">Owner</label>
+                <select id='asset_owner' class="form-control"></select>                 
+            </div> 
+            <div class="form-group btn-box">
+                <button type="button" id='add_asset' class="btn btn-info">Add</button>
+            </div>                
+            
+            </form>
+      </div>
+      <div class="col-md-6 mb-5" data-aos="fade-left" data-aos-delay="400">
+        <form>
+            <h3>Assess</h3>                      
+            <div class="form-group">
+                <label for="assess_asset_id">Asset Id</label>
+                <input id="assess_asset_id" type="number" class="form-control" placeholder="Enter asset id">
+            </div>
+            <div class="form-group">
+                <label for="assess_value">Assess value</label>
+                <input id="assess_value" type="text" class="form-control"  placeholder="Enter value">
+            </div>
+            <div class="form-group btn-box">
+            <button type="button" id='appreciate_asset' class="btn btn-info ">Appreciate</button>
+            <button type="button" id='depreciate_asset' class="btn btn-default ">Depreciate</button>
+            </div>
+            </form> 
+      </div>
+
+      <div class="col-md-6 mb-5" data-aos="fade-left" data-aos-delay="400">
+        <form>
+            <h3>Approve</h3>
+            <div class="form-group">
+                <label for="asset_id">Asset Id</label>
+                <input id="asset_id" type="number" class="form-control"  placeholder="Enter assest id">
+            </div>
+            <div class="form-group">
+                <label for="to_address">Address</label>
+                <select id='to_address' class="form-control">
+                </select>
+            </div>   
+            <div class="form-group btn-box">
+            <button type="button" id='approve_asset' class="btn btn-primary">Approve</button>
+            </div>
+            </form>
+      </div>
+
+      <div class="col-md-6 mb-5" data-aos="fade-left" data-aos-delay="400">
+        <form>
+            <form>
+                <h3>Buy</h3>
+                <div class="form-group">
+                    <label for="from_address">From</label>
+                    <select id='from_address' class="form-control"></select>
+                </div>           
+                <div class="form-group">
+                    <label for="transfer_asset_id">Asset Id</label>
+                    <input id="transfer_asset_id" type="number" class="form-control" placeholder="Enter asset id">
+                </div>
+                <div class="form-group btn-box">
+                <button type="button" id='transfer_asset' class="btn btn-primary">Buy</button>
+                </div>
+                </form>
+      </div>
+
+      <div class="col-md-6 mb-5" data-aos="fade-right" data-aos-delay="100">
+      
+        <div class="info-small">
+            <div class='assetList'>
+                <h3>Owned assets:</h3>
+                <h4 id='balance'></h4>
+                <div id='assets' class="card-group"></div>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-5" data-aos="fade-left" data-aos-delay="300">
+       
+        <div class="info-small">
+            <div class='assetList'>
+                <h3>Total assets:</h3>
+                <h4 id='balance_total'></h4>
+                <div id='assets_total' class="card-group"></div>
+            </div>
+        </div> 
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer class="pt-4 pb-4 text-center bg-light">
+  <div class="container">
+    <div class="my-3">
+      <div class="h4">Saeid Moradi</div>
+      <p>Software Developer</p>
+      <div class="social-nav">
+        <nav role="navigation">
+          <ul class="nav justify-content-center">
+            <li class="nav-item"><a class="nav-link" href="mailto: saeid.moradi436@gmail.com" title="gmail"><i class="fab fa-google"></i><span class="menu-title sr-only">Gmail</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="https://github.com/saeid436" title="github"><i class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/saeid-moradi-55a16076/" title="LinkedIn"><i class="fab fa-linkedin"></i><span class="menu-title sr-only">LinkedIn</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+</div>
+    <div id="scrolltop"><a class="btn btn-secondary" href="#top"><span class="icon"><i class="fas fa-angle-up fa-x"></i></span></a></div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="main-asset/scripts/imagesloaded.pkgd.min.js?ver=1.2.0"></script>
+    <script src="main-asset/scripts/masonry.pkgd.min.js?ver=1.2.0"></script>
+    <script src="main-asset/scripts/BigPicture.min.js?ver=1.2.0"></script>
+    <script src="main-asset/scripts/purecounter.min.js?ver=1.2.0"></script>
+    <script src="main-asset/scripts/bootstrap.bundle.min.js?ver=1.2.0"></script>
+    <script src="main-asset/scripts/aos.min.js?ver=1.2.0"></script>
+    <script src="main-asset/scripts/main.js?ver=1.2.0"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
